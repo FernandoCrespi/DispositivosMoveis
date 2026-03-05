@@ -11,6 +11,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button b;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,5 +20,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getString(R.string.app_name);
 
+        b=findViewById(R.id.button);
+        b.setOnClickListener(v -> {
+            b.setText("DALE");
+        });
     }
 }
