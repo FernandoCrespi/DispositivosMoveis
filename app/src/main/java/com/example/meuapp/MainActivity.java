@@ -2,6 +2,7 @@ package com.example.meuapp;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button b;
     TextView tv;
-    int contador=0;
+    EditText edmin, edmax;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +26,30 @@ public class MainActivity extends AppCompatActivity {
 
         b = findViewById(R.id.button);
         tv = findViewById(R.id.tv);
+        edmin = findViewById(R.id.edMin);
+        edmax = findViewById(R.id.edMax);
 
 
         b.setOnClickListener(v -> {
-            contador++;
+           // int min= Integer.parseInt(edmin.getText().toString());
+           // int max= Integer.parseInt(edmax.getText().toString());
+            String minStr = edmin.getText().toString();
+            String maxStr = edmax.getText().toString();
+            if (minStr.isEmpty()){
+                edmin.setError("Informe uma valor mínimo");
+                return;
+            }
+            if (maxStr.isEmpty()) {
+                edmax.setError("Informe um valor máximo");
+                return;
+            }
+
+            int min=Integer.parseInt(minStr);
+            int max=Integer.parseInt(maxStr);
+
+
             Random random= new Random();
-            int r = random.nextInt(100);
+            int r = random.nextInt(min, max);
             tv.setText(Integer.toString(r));
 
         });
