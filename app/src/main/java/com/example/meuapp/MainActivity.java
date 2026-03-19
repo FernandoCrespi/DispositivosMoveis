@@ -15,6 +15,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     Button b;
+    TextView tv;
     int contador=0;
 
     @Override
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         b = findViewById(R.id.button);
-        TextView tv = findViewById(R.id.tv);
+        tv = findViewById(R.id.tv);
 
 
         b.setOnClickListener(v -> {
