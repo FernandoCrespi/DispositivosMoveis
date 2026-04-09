@@ -12,5 +12,6 @@ import java.lang.reflect.Array;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+    ImageView imageview;
 
 }
