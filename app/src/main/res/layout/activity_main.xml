@@ -40,35 +40,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calcular"
-        app:layout_constraintBottom_toTopOf="@+id/tvClass"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPeso" />
-
-    <TextView
-        android:id="@+id/tvResul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleX="2"
-        android:scaleY="2"
-        android:text="Resultado "
-        app:layout_constraintBottom_toTopOf="@+id/tvClass"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
-    <TextView
-        android:id="@+id/tvClass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleX="2"
-        android:scaleY="2"
-        android:text="Classificação"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvResul" />
+        app:layout_constraintTop_toBottomOf="@+id/etPeso" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -77,7 +52,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvClass"
+        app:layout_constraintTop_toBottomOf="@+id/button"
         app:srcCompat="@drawable/perfil"
         tools:srcCompat="@drawable/perfil" />
 
@@ -103,7 +78,7 @@
         android:text="Peso:"
         app:layout_constraintBottom_toBottomOf="@+id/etPeso"
         app:layout_constraintEnd_toStartOf="@+id/etPeso"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/etPeso" />
 
